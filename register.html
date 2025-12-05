@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Freshshop - Ecommerce Bootstrap 4 HTML Template</title>
+    <title>ThewayShop - Registro</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -41,12 +41,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="custom-select-box">
+                    <div class="custom-select-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-							<option>¥ JPY</option>
-							<option>$ USD</option>
-							<option>€ EUR</option>
-						</select>
+                            <option>&yen; JPY</option>
+                            <option>$ USD</option>
+                            <option>&euro; EUR</option>
+                        </select>
                     </div>
                     <div class="right-phone-box">
                         <p>Call US :- <a href="#"> +11 900 800 100</a></p>
@@ -60,10 +60,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="login-box login-box-links">
-					<a href="register.html" class="login-link register-link">Register Here</a>
-					<a href="my-account.html" class="login-link sign-link">Sign In</a>
-				</div>
+                    <div class="login-box login-box-links">
+                        <a href="register.html" class="login-link register-link">Register Here</a>
+                        <a href="my-account.html" class="login-link sign-link">Sign In</a>
+                    </div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
                             <ul class="offer-box">
@@ -89,7 +89,7 @@
                                     <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT30
                                 </li>
                                 <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now 
+                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
                                 </li>
                             </ul>
                         </div>
@@ -118,12 +118,12 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="dropdown">
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="dropdown active">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-								<li><a href="shop.html">Sidebar Shop</a></li>
-								<li><a href="shop-detail.html">Shop Detail</a></li>
+                                <li><a href="shop.html">Sidebar Shop</a></li>
+                                <li><a href="shop-detail.html">Shop Detail</a></li>
                                 <li><a href="cart.html">Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
                                 <li><a href="my-account.html">My Account</a></li>
@@ -141,10 +141,10 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu"><a href="#">
-						<i class="fa fa-shopping-bag"></i>
+                        <i class="fa fa-shopping-bag"></i>
                             <span class="badge">3</span>
-							<p>My Cart</p>
-					</a></li>
+                            <p>My Cart</p>
+                    </a></li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -199,10 +199,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>ABOUT US</h2>
+                    <h2>Registro</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">ABOUT US</li>
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Registro</li>
                     </ul>
                 </div>
             </div>
@@ -210,156 +210,113 @@
     </div>
     <!-- End All Title Box -->
 
-    <!-- Start About Page  -->
-    <div class="about-box-main">
+    <!-- Start Register -->
+    <div class="register-box-main">
         <div class="container">
             <div class="row">
-				<div class="col-lg-6">
-                    <div class="banner-frame"> <img class="img-fluid" src="images/about-img.jpg" alt="" />
+                <div class="col-lg-7 col-sm-12">
+                    <div class="register-form-wrapper">
+                        <h2>Crea tu cuenta</h2>
+                        <div id="registerAlert" class="register-alert" role="alert" aria-live="assertive"></div>
+                        <p>Centraliza tus pedidos, direcciones y preferencias utilizando un solo perfil. Completa el formulario y accede a promociones exclusivas, seguimiento en tiempo real y atenci&oacute;n personalizada.</p>
+                        <form id="registerForm" class="mt-4" action="php/register.php" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="registerFirstName">Nombre</label>
+                                        <input type="text" class="form-control" id="registerFirstName" name="firstName" placeholder="Ingresa tu nombre" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="registerLastName">Apellido</label>
+                                        <input type="text" class="form-control" id="registerLastName" name="lastName" placeholder="Ingresa tu apellido" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="registerEmail">Correo electr&oacute;nico</label>
+                                        <input type="email" class="form-control" id="registerEmail" name="email" placeholder="nombre@correo.com" required data-error="Proporciona un correo v&aacute;lido">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="registerPhone">Tel&eacute;fono</label>
+                                        <input type="tel" class="form-control" id="registerPhone" name="phone" placeholder="+52 55 0000 0000" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="registerCountry">Pa&iacute;s</label>
+                                        <select class="form-control" id="registerCountry" name="country" required>
+                                            <option value="">Selecciona una opci&oacute;n</option>
+                                            <option value="mx">M&eacute;xico</option>
+                                            <option value="co">Colombia</option>
+                                            <option value="ar">Argentina</option>
+                                            <option value="cl">Chile</option>
+                                            <option value="pe">Per&uacute;</option>
+                                            <option value="other">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="registerPassword">Contrase&ntilde;a</label>
+                                        <input type="password" class="form-control" id="registerPassword" name="password" placeholder="M&iacute;nimo 8 caracteres" pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!$%@#£€*?&amp;]{8,}" required>
+                                        <small class="register-password-hint">Incluye letras y n&uacute;meros para mayor seguridad.</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="registerConfirmPassword">Confirma tu contrase&ntilde;a</label>
+                                        <input type="password" class="form-control" id="registerConfirmPassword" name="confirmPassword" placeholder="Repite tu contrase&ntilde;a" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="registerUpdates" name="updates" checked>
+                                        <label class="custom-control-label" for="registerUpdates">Deseo recibir novedades y ofertas relevantes.</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-4">
+                                        <input type="checkbox" class="custom-control-input" id="registerTerms" name="registerTerms" required>
+                                        <label class="custom-control-label" for="registerTerms">Acepto los <a href="#">t&eacute;rminos y condiciones</a> y la <a href="#">pol&iacute;tica de privacidad</a>.</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="submit-button">
+                                <button class="btn hvr-hover" type="submit">Crear cuenta</button>
+                            </div>
+                        </form>
+                        <div class="register-extra-links">
+                            <p>&iquest;Ya tienes una cuenta? <a href="my-account.html">Inicia sesi&oacute;n desde Sign In</a></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="noo-sh-title-top">We are <span>Freshshop</span></h2>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-                        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<a class="btn hvr-hover" href="#">Read More</a>
-                </div>
-            </div>
-            <div class="row my-5">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>We are Trusted</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <div class="col-lg-5 col-sm-12">
+                    <div class="register-benefits-box">
+                        <h3>Beneficios inmediatos</h3>
+                        <ul>
+                            <li>Historial de compras y facturas siempre disponible.</li>
+                            <li>Direcciones favoritas y notas de entrega guardadas.</li>
+                            <li>Alertas personalizadas para reposiciones y ofertas.</li>
+                            <li>Soporte prioritario con especialistas del cat&aacute;logo.</li>
+                        </ul>
+                        <div class="register-progress">
+                            <div class="step active">Perfil</div>
+                            <div class="step active">Verificaci&oacute;n</div>
+                            <div class="step">Disfruta</div>
+                        </div>
+                        <div class="register-support-box">
+                            <h4>&iquest;Necesitas ayuda?</h4>
+                            <p>Nuestro equipo te orienta en cada paso. Escr&iacute;benos en <a href="contact-us.html">Contact Us</a> o marca +11 900 800 100.</p>
+                            <a href="shop.html" class="btn hvr-hover btn-sm">Explorar productos</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>We are Professional</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="service-block-inner">
-                        <h3>We are Expert</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row my-4">
-                <div class="col-12">
-                    <h2 class="noo-sh-title">Meet Our Team</h2>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="hover-team">
-                        <div class="our-team"> <img src="images/img-1.jpg" alt="" />
-                            <div class="team-content">
-                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" class="fab fa-facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-twitter"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-google-plus"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-youtube"></a>
-                                </li>
-                            </ul>
-                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                        </div>
-                        <div class="team-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
-                        </div>
-                        <hr class="my-0"> </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="hover-team">
-                        <div class="our-team"> <img src="images/img-2.jpg" alt="" />
-                            <div class="team-content">
-                                <h3 class="title">Kristiana</h3> <span class="post">Web Developer</span> </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" class="fab fa-facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-twitter"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-google-plus"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-youtube"></a>
-                                </li>
-                            </ul>
-                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                        </div>
-                        <div class="team-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
-                        </div>
-                        <hr class="my-0"> </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="hover-team">
-                        <div class="our-team"> <img src="images/img-3.jpg" alt="" />
-                            <div class="team-content">
-                                <h3 class="title">Steve Thomas</h3> <span class="post">Web Developer</span> </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" class="fab fa-facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-twitter"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-google-plus"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-youtube"></a>
-                                </li>
-                            </ul>
-                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                        </div>
-                        <div class="team-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
-                        </div>
-                        <hr class="my-0"> </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
-                    <div class="hover-team">
-                        <div class="our-team"> <img src="images/img-1.jpg" alt="" />
-                            <div class="team-content">
-                                <h3 class="title">Williamson</h3> <span class="post">Web Developer</span> </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" class="fab fa-facebook"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-twitter"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-google-plus"></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="fab fa-youtube"></a>
-                                </li>
-                            </ul>
-                            <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
-                        </div>
-                        <div class="team-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna diam, maximus ut ullamcorper quis, placerat id eros. Duis semper justo sed condimentum rutrum. Nunc tristique purus turpis. Maecenas vulputate. </p>
-                        </div>
-                        <hr class="my-0"> </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End About Page -->
+    <!-- End Register -->
 
     <!-- Start Instagram Feed  -->
     <div class="instagram-box">
@@ -453,32 +410,32 @@
     <footer>
         <div class="footer-main">
             <div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Business Time</h3>
-							<ul class="list-time">
-								<li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Newsletter</h3>
-							<form class="newsletter-box">
-								<div class="form-group">
-									<input class="" type="email" name="Email" placeholder="Email Address*" />
-									<i class="fa fa-envelope"></i>
-								</div>
-								<button class="btn hvr-hover" type="submit">Submit</button>
-							</form>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Social Media</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<ul>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Business Time</h3>
+                            <ul class="list-time">
+                                <li>Monday - Friday: 08.00am to 05.00pm</li> <li>Saturday: 10.00am to 08.00pm</li> <li>Sunday: <span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Newsletter</h3>
+                            <form class="newsletter-box">
+                                <div class="form-group">
+                                    <input class="" type="email" name="Email" placeholder="Email Address*" />
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <button class="btn hvr-hover" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Social Media</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
@@ -487,16 +444,16 @@
                                 <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                             </ul>
-						</div>
-					</div>
-				</div>
-				<hr>
+                        </div>
+                    </div>
+                </div>
+                <hr>
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
                             <h4>About Freshshop</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 							
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>                           
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
@@ -559,6 +516,62 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+    (function() {
+        var alertBox = document.getElementById('registerAlert');
+        if (!alertBox) {
+            return;
+        }
+        var params = new URLSearchParams(window.location.search);
+        var status = params.get('status');
+        if (!status) {
+            return;
+        }
+        var reason = params.get('reason') || '';
+        var message = '';
+        if (status === 'success') {
+            message = '¡Registro completado! Revisa tu correo para confirmar tu cuenta.';
+        } else {
+            switch (reason) {
+                case 'invalid_email':
+                    message = 'El correo proporcionado no es válido.';
+                    break;
+                case 'password_mismatch':
+                    message = 'Las contraseñas no coinciden. Inténtalo de nuevo.';
+                    break;
+                case 'terms_required':
+                    message = 'Debes aceptar los términos y condiciones para continuar.';
+                    break;
+                case 'duplicate_email':
+                    message = 'Ya existe una cuenta con ese correo electrónico.';
+                    break;
+                case 'missing_fields':
+                    message = 'Por favor completa todos los campos obligatorios.';
+                    break;
+                case 'db_connect':
+                case 'db_execute':
+                    message = 'Tuvimos un inconveniente al guardar tus datos. Inténtalo más tarde.';
+                    break;
+                case 'role_assign':
+                    message = 'Se creó la cuenta pero no pudimos asignar el rol. Intenta nuevamente.';
+                    break;
+                case 'hash_error':
+                    message = 'No pudimos asegurar tu contraseña. Intenta nuevamente.';
+                    break;
+                default:
+                    message = 'No pudimos completar tu registro. Revisa los datos e intenta nuevamente.';
+            }
+        }
+        alertBox.textContent = message;
+        alertBox.classList.add('visible', status === 'success' ? 'success' : 'error');
+        params.delete('status');
+        params.delete('reason');
+        var newQuery = params.toString();
+        var cleanUrl = window.location.pathname + (newQuery ? '?' + newQuery : '');
+        window.history.replaceState({}, document.title, cleanUrl);
+    })();
+    </script>
 </body>
 
 </html>
+

@@ -1,2 +1,236 @@
 
 /** ADD YOUR AWESOME CODES HERE **/
+
+.login-box.login-box-links {
+    width: auto;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.login-box .login-link {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    border-radius: 30px;
+    border: 1px solid #b0b435;
+    background: #b0b435;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.login-box .login-link:hover,
+.login-box .login-link:focus {
+    background: #8f9332;
+    border-color: #8f9332;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.login-box .login-link.sign-link {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.login-box .login-link.sign-link:hover,
+.login-box .login-link.sign-link:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .login-box.login-box-links {
+        justify-content: flex-start;
+        margin: 15px 0 0;
+    }
+}
+
+.register-box-main {
+    padding: 70px 0;
+    background: #f9f9f9;
+}
+
+.register-form-wrapper,
+.register-benefits-box {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 40px 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.register-form-wrapper h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.register-form-wrapper p {
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.register-form-wrapper .form-group label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #333333;
+}
+
+.register-form-wrapper .form-control {
+    border-radius: 0;
+    min-height: 45px;
+}
+
+.register-password-hint {
+    font-size: 12px;
+    color: #999999;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.register-form-wrapper .btn {
+    padding: 12px 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.register-benefits-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.register-benefits-box ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.register-benefits-box ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    color: #555555;
+}
+
+.register-benefits-box ul li:before {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    color: #b0b435;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.register-progress {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.register-progress .step {
+    flex: 1;
+    text-align: center;
+    padding-top: 15px;
+    border-top: 2px solid #ededed;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999999;
+}
+
+.register-progress .step.active {
+    border-color: #b0b435;
+    color: #333333;
+    font-weight: 600;
+}
+
+.register-support-box {
+    background: #f7f7f7;
+    border-left: 3px solid #b0b435;
+    padding: 20px 25px;
+}
+
+.register-support-box h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.register-support-box p {
+    margin-bottom: 15px;
+    color: #666666;
+}
+
+.register-support-box .btn {
+    padding: 8px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.register-extra-links {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.register-extra-links a {
+    font-weight: 600;
+}
+
+.register-alert {
+    display: none;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-left: 4px solid transparent;
+    background: #f7f7f7;
+    font-weight: 600;
+}
+
+.register-alert.visible {
+    display: block;
+}
+
+.register-alert.success {
+    border-color: #28a745;
+    color: #1f7a34;
+    background: #e8f5ea;
+}
+
+.register-alert.error {
+    border-color: #dc3545;
+    color: #a71d2a;
+    background: #fdeaea;
+}
+
+@media (max-width: 991px) {
+    .register-box-main {
+        padding: 40px 0;
+    }
+
+    .register-form-wrapper,
+    .register-benefits-box {
+        padding: 30px 20px;
+    }
+
+    .register-progress {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .register-progress .step {
+        border-top: none;
+        border-left: 3px solid #ededed;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .register-progress .step.active {
+        border-color: #b0b435;
+    }
+}
