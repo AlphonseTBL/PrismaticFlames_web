@@ -211,5 +211,69 @@
 	$(".brand-box").niceScroll({
 		cursorcolor: "#9b9b9c",
 	});
+
+	$(document).ready(function() {
+		var authBoxes = document.querySelectorAll('[data-auth-box]');
+		if (!authBoxes.length) {
+			return;
+		}
+
+		var renderAuthState = function(payload) {
+			if (!payload || !payload.authenticated) {
+				return;
+			}
+			Array.prototype.forEach.call(authBoxes, function(box) {
+				box.classList.add('authenticated');
+				var nameEl = box.querySelector('[data-user-name]');
+				if (nameEl) {
+					nameEl.textContent = payload.name || 'Cliente';
+				}
+				var idEl = box.querySelector('[data-user-id]');
+				if (idEl) {
+					idEl.textContent = 'ID #' + (payload.id || 0);
+				}
+				var pointsEl = box.querySelector('[data-user-points]');
+				if (pointsEl) {
+					var points = typeof payload.points === 'number' ? payload.points : parseInt(payload.points || 0, 10);
+					pointsEl.textContent = (isNaN(points) ? 0 : points) + ' pts';
+				}
+			});
+		};
+
+		var handleError = function(error) {
+			if (window && window.console && console.warn) {
+				console.warn('No se pudo obtener la sesión del usuario', error);
+			}
+		};
+
+		var requestUrl = 'php/session-info.php?ts=' + Date.now();
+
+		if (window.fetch) {
+			fetch(requestUrl, {
+				credentials: 'include',
+				headers: {
+					'Accept': 'application/json'
+				}
+			}).then(function(response) {
+				if (!response.ok) {
+					throw new Error('Respuesta no válida');
+				}
+				return response.json();
+			}).then(renderAuthState).catch(function(error) {
+				handleError(error);
+				$.ajax({
+					url: requestUrl,
+					dataType: 'json',
+					cache: false
+				}).done(renderAuthState).fail(handleError);
+			});
+		} else {
+			$.ajax({
+				url: requestUrl,
+				dataType: 'json',
+				cache: false
+			}).done(renderAuthState).fail(handleError);
+		}
+	});
 	
 }(jQuery));

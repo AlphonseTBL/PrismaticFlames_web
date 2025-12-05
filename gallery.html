@@ -60,9 +60,21 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="login-box login-box-links">
-					<a href="register.html" class="login-link register-link">RegÃ­strate aquÃ­</a>
-					<a href="my-account.html" class="login-link sign-link">Iniciar sesiÃ³n</a>
+								<div class="login-box login-box-links" data-auth-box>
+					<div class="auth-guest">
+						<a href="register.html" class="login-link register-link">Regístrate aquí</a>
+						<a href="login.html" class="login-link sign-link">Iniciar sesión</a>
+					</div>
+					<div class="auth-user">
+						<div class="user-summary">
+							<span class="user-name" data-user-name>Usuario</span>
+							<div class="user-meta">
+								<span class="user-id" data-user-id>ID #0</span>
+								<span class="user-points" data-user-points>0 pts</span>
+							</div>
+						</div>
+						<a href="php/logout.php" class="login-link logout-link">Cerrar sesión</a>
+					</div>
 				</div>
                     <div class="text-slid-box">
                         <div id="offer-box" class="carouselTicker">
@@ -607,6 +619,8 @@
 
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->

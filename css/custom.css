@@ -42,20 +42,78 @@
     border-color: #ffffff;
 }
 
+.login-box .auth-user {
+    display: none;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+    text-transform: none;
+}
+
+.login-box .user-summary {
+    text-align: right;
+    line-height: 1.2;
+}
+
+.login-box .user-meta {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.login-box .logout-link {
+    background: #ff6b6b;
+    border-color: #ff6b6b;
+    color: #ffffff;
+}
+
+.login-box .logout-link:hover,
+.login-box .logout-link:focus {
+    background: #d84a4a;
+    border-color: #d84a4a;
+}
+
+.login-box.authenticated .auth-user {
+    display: flex;
+}
+
+.login-box.authenticated .auth-guest {
+    display: none;
+}
+
 @media (max-width: 767px) {
     .login-box.login-box-links {
         justify-content: flex-start;
         margin: 15px 0 0;
     }
+
+    .login-box .auth-user {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .login-box .user-summary {
+        text-align: left;
+    }
+
+    .login-box .user-meta {
+        justify-content: flex-start;
+    }
 }
 
-.register-box-main {
+.register-box-main,
+.login-box-main {
     padding: 70px 0;
     background: #f9f9f9;
 }
 
 .register-form-wrapper,
-.register-benefits-box {
+.register-benefits-box,
+.login-form-wrapper,
+.login-info-box {
     background: #ffffff;
     border: 1px solid #eeeeee;
     padding: 40px 35px;
@@ -63,18 +121,21 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
-.register-form-wrapper h2 {
+.register-form-wrapper h2,
+.login-form-wrapper h2 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
-.register-form-wrapper p {
+.register-form-wrapper p,
+.login-form-wrapper p {
     color: #777777;
     margin-bottom: 10px;
 }
 
-.register-form-wrapper .form-group label {
+.register-form-wrapper .form-group label,
+.login-form-wrapper .form-group label {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 600;
@@ -82,7 +143,8 @@
     color: #333333;
 }
 
-.register-form-wrapper .form-control {
+.register-form-wrapper .form-control,
+.login-form-wrapper .form-control {
     border-radius: 0;
     min-height: 45px;
 }
@@ -94,7 +156,8 @@
     display: inline-block;
 }
 
-.register-form-wrapper .btn {
+.register-form-wrapper .btn,
+.login-form-wrapper .btn {
     padding: 12px 32px;
     font-weight: 700;
     text-transform: uppercase;
@@ -174,16 +237,75 @@
     text-transform: uppercase;
 }
 
-.register-extra-links {
+.login-info-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.login-info-box p {
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.login-support-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.login-support-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #555555;
+}
+
+.login-support-list li:before {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    color: #b0b435;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.login-help-card {
+    background: #f7f7f7;
+    border-left: 3px solid #b0b435;
+    padding: 20px 25px;
+}
+
+.login-help-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login-help-card p {
+    margin-bottom: 15px;
+    color: #666666;
+}
+
+.login-help-card .btn {
+    padding: 8px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.register-extra-links,
+.login-extra-links {
     margin-top: 25px;
     font-size: 14px;
 }
 
-.register-extra-links a {
+.register-extra-links a,
+.login-extra-links a {
     font-weight: 600;
 }
 
-.register-alert {
+.register-alert,
+.login-alert {
     display: none;
     padding: 15px 20px;
     margin-bottom: 25px;
@@ -192,29 +314,91 @@
     font-weight: 600;
 }
 
-.register-alert.visible {
+.register-alert.visible,
+.login-alert.visible {
     display: block;
 }
 
-.register-alert.success {
+.register-alert.success,
+.login-alert.success {
     border-color: #28a745;
     color: #1f7a34;
     background: #e8f5ea;
 }
 
-.register-alert.error {
+.register-alert.error,
+.login-alert.error {
     border-color: #dc3545;
     color: #a71d2a;
     background: #fdeaea;
 }
 
+.login-info-box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.login-info-box p {
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.login-support-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.login-support-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #555555;
+}
+
+.login-support-list li:before {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    color: #b0b435;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.login-help-card {
+    background: #f7f7f7;
+    border-left: 3px solid #b0b435;
+    padding: 20px 25px;
+}
+
+.login-help-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.login-help-card p {
+    margin-bottom: 15px;
+    color: #666666;
+}
+
+.login-help-card .btn {
+    padding: 8px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
 @media (max-width: 991px) {
-    .register-box-main {
+    .register-box-main,
+    .login-box-main {
         padding: 40px 0;
     }
 
     .register-form-wrapper,
-    .register-benefits-box {
+    .register-benefits-box,
+    .login-form-wrapper,
+    .login-info-box {
         padding: 30px 20px;
     }
 

@@ -1,0 +1,104 @@
+.nice-select,
+.nice-select *,
+.nice-select:after {
+    box-sizing: border-box;
+}
+
+.nice-select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #ffffff;
+    border-radius: 0;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 38px;
+    outline: none;
+    padding-left: 15px;
+    padding-right: 40px;
+    position: relative;
+    text-align: left;
+    transition: border 0.2s ease;
+}
+
+.nice-select:after {
+    border-bottom: 2px solid #555;
+    border-right: 2px solid #555;
+    content: '';
+    display: block;
+    height: 8px;
+    margin-top: -6px;
+    pointer-events: none;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: rotate(45deg);
+    width: 8px;
+}
+
+.nice-select.open:after {
+    transform: rotate(-135deg);
+    margin-top: -2px;
+}
+
+.nice-select .list {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 5px 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform-origin: 50% 0;
+    transform: scale(0.95) translateY(-5px);
+    transition: all 0.2s ease;
+    width: 100%;
+    z-index: 10;
+}
+
+.nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+}
+
+.nice-select .option {
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 40px;
+    list-style: none;
+    min-height: 40px;
+    padding: 0 15px;
+    text-align: left;
+    transition: background 0.2s ease;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+    background-color: #f4f4f4;
+}
+
+.nice-select .option.selected {
+    font-weight: 700;
+}
+
+.nice-select.disabled {
+    color: #999;
+    pointer-events: none;
+}
+
+.nice-select.disabled:after {
+    border-color: #ccc;
+}
+
