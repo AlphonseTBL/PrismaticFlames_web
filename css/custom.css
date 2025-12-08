@@ -389,6 +389,49 @@
     text-transform: uppercase;
 }
 
+.book-meta {
+    display: block;
+    color: #ffffff;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.book-meta i {
+    margin-right: 6px;
+}
+
+.book-meta-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.book-badge {
+    background: #f4f4f4;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 4px 12px;
+    color: #555555;
+}
+
+.book-cover-wrapper {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 20px;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.book-cover-wrapper img {
+    max-height: 380px;
+    width: 100%;
+    object-fit: contain;
+}
+
 @media (max-width: 991px) {
     .register-box-main,
     .login-box-main {

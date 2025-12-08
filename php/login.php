@@ -33,10 +33,10 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 $mysqli = @new mysqli(
-    'localhost',
+    '127.0.0.1',
     'lgunprmiuy_admin',
-    'WRO0a7cSCGxD',
-    'lgunprmiuy_prismaticflames'
+    'UChD1dZxhwSn',
+    'lgunprmiuy_PrismaticFlames'
 );
 
 if ($mysqli->connect_errno) {
