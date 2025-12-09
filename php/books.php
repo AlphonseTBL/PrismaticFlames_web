@@ -59,7 +59,7 @@ function build_cover_index(string $directory): array
 }
 
 /**
- * Devuelve la mejor ruta de portada para un libro, ya sea la almacenada en BD o una imagen local.
+ * Devuelve la mejor ruta de portada para un libro, priorizando la almacenada en base de datos.
  *
  * @param array<string, mixed> $row
  * @param array<int, array{normalized: string, public: string}> $coverIndex
@@ -127,36 +127,35 @@ $connection->set_charset('utf8mb4');
 
 $bookId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
-$query = "
-    SELECT
-        l.id,
-        l.titulo,
-        l.descripcion,
-        l.precio,
-        l.stock,
-        l.portada_url,
-        l.fecha_publicacion,
-        l.isbn,
-        GROUP_CONCAT(DISTINCT a.nombre ORDER BY a.nombre SEPARATOR ', ') AS autores,
-        GROUP_CONCAT(DISTINCT c.nombre ORDER BY c.nombre SEPARATOR ', ') AS categorias
-    FROM libros l
-    LEFT JOIN libros_autores la ON la.libro_id = l.id
-    LEFT JOIN autores a ON a.id = la.autor_id
-    LEFT JOIN libros_categorias lc ON lc.libro_id = l.id
-    LEFT JOIN categorias c ON c.id = lc.categoria_id
-";
+$sql = <<<SQL
+SELECT
+    l.id,
+    l.titulo,
+    l.descripcion,
+    l.precio,
+    l.stock,
+    l.portada_url,
+    l.fecha_publicacion,
+    l.isbn,
+    GROUP_CONCAT(DISTINCT a.nombre ORDER BY a.nombre SEPARATOR ', ') AS autores,
+    GROUP_CONCAT(DISTINCT c.nombre ORDER BY c.nombre SEPARATOR ', ') AS categorias
+FROM libros l
+LEFT JOIN libros_autores la ON la.libro_id = l.id
+LEFT JOIN autores a ON a.id = la.autor_id
+LEFT JOIN libros_categorias lc ON lc.libro_id = l.id
+LEFT JOIN categorias c ON c.id = lc.categoria_id
+SQL;
 
-$whereClause = '';
 if ($bookId > 0) {
-    $whereClause = " WHERE l.id = " . $bookId . " ";
+    $sql .= " WHERE l.id = {$bookId} ";
 }
 
-$query .= $whereClause . "
-    GROUP BY l.id, l.titulo, l.descripcion, l.precio, l.stock, l.portada_url, l.fecha_publicacion, l.isbn
-    ORDER BY l.titulo ASC
+$sql .= "
+GROUP BY l.id, l.titulo, l.descripcion, l.precio, l.stock, l.portada_url, l.fecha_publicacion, l.isbn
+ORDER BY l.titulo ASC
 ";
 
-$result = $connection->query($query);
+$result = $connection->query($sql);
 
 if ($result === false) {
     $connection->close();
@@ -177,6 +176,7 @@ while ($row = $result->fetch_assoc()) {
         'precio' => (float)$row['precio'],
         'stock' => (int)$row['stock'],
         'portada' => $coverPath,
+        'portada_url' => $row['portada_url'],
         'fecha_publicacion' => $row['fecha_publicacion'],
         'isbn' => $row['isbn'],
         'autores' => $row['autores'],

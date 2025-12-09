@@ -38,7 +38,7 @@
         flag.appendChild(flagText);
 
         var img = document.createElement('img');
-        img.src = book.portada || fallbackImage;
+        img.src = book.portada_url || book.portada || fallbackImage;
         img.alt = book.titulo;
         img.className = 'img-fluid';
 
@@ -98,7 +98,7 @@
         flag.appendChild(flagText);
 
         var img = document.createElement('img');
-        img.src = book.portada || fallbackImage;
+        img.src = book.portada_url || book.portada || fallbackImage;
         img.alt = book.titulo;
         img.className = 'img-fluid';
 

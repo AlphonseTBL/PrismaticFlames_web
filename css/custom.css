@@ -407,6 +407,24 @@
     margin-bottom: 15px;
 }
 
+/* Ajustes de portadas en el home para que las tarjetas se adapten a portada_url */
+.products-box .products-single .box-img-hover {
+    min-height: 340px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.products-box .products-single .box-img-hover img {
+    max-height: 320px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
 .book-badge {
     background: #f4f4f4;
     border-radius: 20px;

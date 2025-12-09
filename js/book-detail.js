@@ -81,7 +81,8 @@
             }
 
             if (coverImg) {
-                coverImg.src = book.portada || fallbackImage;
+                var coverSource = book.portada_url || book.portada || fallbackImage;
+                coverImg.src = coverSource;
                 coverImg.alt = 'Portada de ' + (book.titulo || 'libro');
                 coverImg.onerror = function () {
                     this.onerror = null;
