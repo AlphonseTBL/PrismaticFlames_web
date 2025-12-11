@@ -277,3 +277,11 @@
 	});
 	
 }(jQuery));
+
+// Cargar comportamiento de carrito en todas las páginas de forma diferida
+(function() {
+    var script = document.createElement('script');
+    script.src = 'js/cart.js';
+    script.defer = true;
+    document.body.appendChild(script);
+})();

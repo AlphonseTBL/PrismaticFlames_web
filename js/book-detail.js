@@ -90,6 +90,13 @@
                 };
             }
 
+            // Propagar id del libro al botón de carrito
+            var addBtn = document.getElementById('add-to-cart-btn');
+            if (addBtn && book.id) {
+                addBtn.setAttribute('data-book-id', book.id);
+                addBtn.setAttribute('data-libros-id', book.id);
+            }
+
             if (extraInfoBox) {
                 var snippets = [];
                 if (book.autores) {

@@ -425,6 +425,15 @@
     object-fit: contain;
 }
 
+/* Side cart visibility */
+.side {
+    display: none;
+}
+
+.side.open {
+    display: block;
+}
+
 .book-badge {
     background: #f4f4f4;
     border-radius: 20px;
