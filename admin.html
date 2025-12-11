@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Panel admin/moderador - PrismaticFlames</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="admin-panel">
+    <div class="container py-4">
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <h1 class="mb-1">Panel de administración / moderación</h1>
+                <p class="text-muted mb-4">Solo Moderador o Administrador.</p>
+            </div>
+            <a href="php/logout.php" class="btn btn-outline-danger btn-sm hvr-hover">Cerrar sesión</a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-light font-weight-bold">Tablas</div>
+                    <div class="card-body p-0">
+                        <ul id="tables-list" class="list-group list-group-flush small admin-tables-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 mb-4">
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                        <span>Registros</span>
+                        <div>
+                            <button id="btn-refresh" class="btn btn-outline-secondary btn-sm hvr-hover">Recargar</button>
+                            <button id="btn-new" class="btn btn-primary btn-sm hvr-hover text-white">Nuevo</button>
+                            <button id="btn-save" class="btn btn-success btn-sm hvr-hover text-white" disabled>Guardar</button>
+                            <button id="btn-delete" class="btn btn-danger btn-sm hvr-hover text-white" disabled>Eliminar</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive admin-table-wrapper">
+                            <table class="table table-sm table-hover table-striped table-bordered mb-0" id="data-table">
+                                <thead class="thead-light"></thead>
+                                <tbody class="bg-white"></tbody>
+                            </table>
+                            <div id="admin-empty" class="text-center text-muted small py-3" style="display:none;">Sin registros.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light font-weight-bold">Editar registro</div>
+                    <div class="card-body">
+                        <form id="crud-form" class="row admin-form"></form>
+                        <div id="crud-status" class="mt-2 text-muted small"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/admin-crud.js"></script>
+</body>
+</html>
+

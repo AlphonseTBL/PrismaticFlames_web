@@ -32,6 +32,28 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     redirect_with_status('error', 'invalid_email');
 }
 
+function user_is_admin_or_moderator(mysqli $db, int $userId): bool
+{
+    $sql = "
+        SELECT 1
+        FROM usuarios_roles ur
+        INNER JOIN roles r ON r.id = ur.rol_id
+        WHERE ur.usuario_id = ?
+          AND r.nombre IN ('Moderador', 'Administrador')
+        LIMIT 1
+    ";
+    $stmt = $db->prepare($sql);
+    if (!$stmt) {
+        return false;
+    }
+    $stmt->bind_param('i', $userId);
+    $stmt->execute();
+    $stmt->store_result();
+    $isAdmin = $stmt->num_rows > 0;
+    $stmt->close();
+    return $isAdmin;
+}
+
 $mysqli = @new mysqli(
     '127.0.0.1',
     'lgunprmiuy_admin',
@@ -97,8 +119,17 @@ $_SESSION['user_last_name'] = $user['apellido'] ?? '';
 $_SESSION['user_email'] = $user['email'] ?? $email;
 $_SESSION['user_points'] = isset($user['puntos_acumulados']) ? (int)$user['puntos_acumulados'] : 0;
 
-$mysqli->close();
+$isAdmin = user_is_admin_or_moderator($mysqli, (int)$user['id']);
 
+if ($isAdmin) {
+    $_SESSION['user_role'] = 'admin';
+    $mysqli->close();
+    header('Location: ../admin.html?status=login_success');
+    exit;
+}
+
+$_SESSION['user_role'] = 'user';
+$mysqli->close();
 header('Location: ../my-account.html?status=login_success');
 exit;
 

@@ -463,6 +463,32 @@
     display: none !important;
 }
 
+.admin-panel {
+    background: #f7f9fb;
+}
+.admin-panel h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+.admin-tables-list {
+    max-height: 360px;
+    overflow: auto;
+}
+.admin-table-wrapper {
+    max-height: 320px;
+    overflow: auto;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+.admin-form .form-group label {
+    font-weight: 600;
+    color: #444;
+}
+.admin-form .form-control {
+    border-radius: 4px;
+    border-color: #dfe3e8;
+}
+
 .book-badge {
     background: #f4f4f4;
     border-radius: 20px;
