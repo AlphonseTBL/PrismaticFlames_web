@@ -1,523 +1,186 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- Basic -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Site Metas -->
     <title>Freshshop - Mi cuenta</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Site CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
-
 <body>
-    <!-- Start Main Top -->
     <div class="main-top">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<div class="custom-select-box">
-                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-							<option>¥ JPY</option>
-							<option>$ USD</option>
-							<option>€ EUR</option>
-						</select>
-                    </div>
                     <div class="right-phone-box">
                         <p>Llámanos: <a href="#"> +11 900 800 100</a></p>
                     </div>
-                    <div class="our-link">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-user s_color"></i> Mi cuenta</a></li>
-                            <li><a href="#"><i class="fas fa-location-arrow"></i> Nuestra ubicación</a></li>
-                            <li><a href="#"><i class="fas fa-headset"></i> Contáctanos</a></li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-								<div class="login-box login-box-links" data-auth-box>
-					<div class="auth-guest">
-						<a href="register.html" class="login-link register-link">Regístrate aquí</a>
-						<a href="login.html" class="login-link sign-link">Iniciar sesión</a>
-					</div>
-					<div class="auth-user">
-						<div class="user-summary">
-							<span class="user-name" data-user-name>Usuario</span>
-							<div class="user-meta">
-								<span class="user-id" data-user-id>ID #0</span>
-								<span class="user-points" data-user-points>0 pts</span>
-							</div>
-						</div>
-						<a href="php/logout.php" class="login-link logout-link">Cerrar sesión</a>
-					</div>
-					</div>
-                    <div class="text-slid-box">
-                        <div id="offer-box" class="carouselTicker">
-                            <ul class="offer-box">
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% de descuento en toda tu compra con el cupón: offT80
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% de descuento en vegetales seleccionados
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 10% menos en tu próxima compra de vegetales frescos
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% de descuento por tiempo limitado ¡compra ahora!
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 10% de descuento adicional en vegetales de temporada
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Aprovecha 50% - 80% en tu surtido saludable
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% extra con el cupón especial: offT30
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Mitad de precio en productos destacados ¡no lo dejes pasar!
-                                </li>
-                            </ul>
+                    <div class="login-box login-box-links" data-auth-box>
+                        <div class="auth-guest">
+                            <a href="register.html" class="login-link register-link">Regístrate aquí</a>
+                            <a href="login.html" class="login-link sign-link">Iniciar sesión</a>
+                        </div>
+                        <div class="auth-user">
+                            <div class="user-summary">
+                                <span class="user-name" data-user-name>Usuario</span>
+                                <div class="user-meta">
+                                    <span class="user-id" data-user-id>ID #0</span>
+                                    <span class="user-points" data-user-points>0 pts</span>
+                                </div>
+                            </div>
+                            <a href="php/logout.php" class="login-link logout-link">Cerrar sesión</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Main Top -->
 
-    <!-- Start Main Top -->
     <header class="main-header">
-        <!-- Start Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
             <div class="container">
-                <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
                 </div>
-                <!-- End Header Navigation -->
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-					<ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-						<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
-						<li class="dropdown active">
-							<a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">TIENDA</a>
-							<ul class="dropdown-menu">
-								<li><a href="shop.html">Tienda con barra lateral</a></li>
-								<li><a href="shop-detail.html">Detalle de producto</a></li>
-								<li><a href="cart.html">Carrito</a></li>
-								<li><a href="checkout.html">Pagar</a></li>
-								<li><a href="my-account.html">Mi cuenta</a></li>
-								<li><a href="wishlist.html">Lista de deseos</a></li>
-							</ul>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="contact-us.html">Contáctanos</a></li>
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Sobre nosotros</a></li>
+                        <li class="dropdown active">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">TIENDA</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="shop.html">Tienda con barra lateral</a></li>
+                                <li><a href="shop-detail.html">Detalle de producto</a></li>
+                                <li><a href="cart.html">Carrito</a></li>
+                                <li><a href="checkout.html">Pagar</a></li>
+                                <li><a href="my-account.html">Mi cuenta</a></li>
+                                <li><a href="wishlist.html">Lista de deseos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contáctanos</a></li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
 
-                <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu"><a href="#">
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-							<p>Mi carrito</p>
-					</a></li>
+                        <li class="side-menu"><a href="#"><i class="fa fa-shopping-bag"></i><span class="badge">0</span><p>Mi carrito</p></a></li>
                     </ul>
                 </div>
-                <!-- End Atribute Navigation -->
             </div>
-            <!-- Start Side Menu -->
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
                 <li class="cart-box">
                     <ul class="cart-list">
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Delica omtantur </a></h6>
-                            <p>1x - <span class="price">$80.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Omnes ocurreret</a></h6>
-                            <p>1x - <span class="price">$60.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Agam facilisis</a></h6>
-                            <p>1x - <span class="price">$40.00</span></p>
-                        </li>
-                        <li class="total">
-                            <a href="#" class="btn btn-default hvr-hover btn-cart">Ver carrito</a>
-                            <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>
+                        <li><p>Tu carrito está vacío.</p></li>
                     </ul>
                 </li>
             </div>
-            <!-- End Side Menu -->
         </nav>
-        <!-- End Navigation -->
     </header>
-    <!-- End Main Top -->
 
-    <!-- Start Top Buscar -->
-    <div class="top-search">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Buscar">
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-            </div>
-        </div>
-    </div>
-    <!-- End Top Buscar -->
-
-    <!-- Start All Title Box -->
     <div class="all-title-box">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Mi cuenta</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Tienda</a></li>
+                        <li class="breadcrumb-item"><a href="shop.html">Tienda</a></li>
                         <li class="breadcrumb-item active">Mi cuenta</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End All Title Box -->
 
-    <!-- Start Mi cuenta  -->
     <div class="my-account-box-main">
         <div class="container">
-            <div class="my-account-page">
-                <div class="row">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="account-box">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <a href="#"> <i class="fa fa-gift"></i> </a>
+            <div class="row">
+                <div class="col-lg-5 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Datos de tu cuenta</h3>
+                            <form id="profile-form">
+                                <div class="form-group">
+                                    <label for="profile-nombre">Nombre</label>
+                                    <input type="text" id="profile-nombre" class="form-control" required>
                                 </div>
-                                <div class="service-desc">
-                                    <h4>Tus pedidos</h4>
-                                    <p>Rastrea, devuelve o vuelve a comprar tus productos.</p>
+                                <div class="form-group">
+                                    <label for="profile-apellido">Apellido</label>
+                                    <input type="text" id="profile-apellido" class="form-control" required>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="account-box">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <a href="#"><i class="fa fa-lock"></i> </a>
+                                <div class="form-group">
+                                    <label for="profile-email">Correo electrónico</label>
+                                    <input type="email" id="profile-email" class="form-control" required>
                                 </div>
-                                <div class="service-desc">
-                                    <h4>Inicio de sesión y seguridad</h4>
-                                    <p>Actualiza tu contraseña, nombre o teléfono.</p>
+                                <div class="form-group">
+                                    <label for="profile-telefono">Teléfono</label>
+                                    <input type="text" id="profile-telefono" class="form-control" required>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="account-box">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <a href="#"> <i class="fa fa-location-arrow"></i> </a>
+                                <div class="form-group">
+                                    <label for="profile-password">Contraseña (dejar vacío para no cambiar)</label>
+                                    <input type="password" id="profile-password" class="form-control">
                                 </div>
-                                <div class="service-desc">
-                                    <h4>Tus direcciones</h4>
-                                    <p>Gestiona direcciones para envíos y obsequios.</p>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="submit" id="save-profile-btn" class="btn hvr-hover">Guardar cambios</button>
+                                    <button type="button" id="delete-account-btn" class="btn btn-danger">Borrar cuenta</button>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="account-box">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <a href="#"> <i class="fa fa-credit-card"></i> </a>
-                                </div>
-                                <div class="service-desc">
-                                    <h4>Métodos de pago</h4>
-                                    <p>Agrega o actualiza tarjetas y cuentas.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="account-box">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <a href="#"> <i class="fab fa-paypal"></i> </a>
-                                </div>
-                                <div class="service-desc">
-                                    <h4>PayPal</h4>
-                                    <p>Consulta beneficios y configuración de pagos.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="account-box">
-                            <div class="service-box">
-                                <div class="service-icon">
-                                    <a href="#"> <i class="fab fa-amazon"></i> </a>
-                                </div>
-                                <div class="service-desc">
-                                    <h4>Saldo de billetera</h4>
-                                    <p>Añade fondos y revisa movimientos.</p>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="bottom-box">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="account-box">
-                                <div class="service-box">
-                                    <div class="service-desc">
-                                        <h4>Programas de recompensas</h4>
-                                        <ul>
-                                            <li> <a href="#">Aplicaciones y más</a> </li>
-                                            <li> <a href="#">Contenido y dispositivos</a> </li>
-                                            <li> <a href="#">Preferencias de música</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="account-box">
-                                <div class="service-box">
-                                    <div class="service-desc">
-                                        <h4>Preferencias de comunicación</h4>
-                                        <ul>
-                                            <li> <a href="#">Preferencias de anuncios </a> </li>
-                                            <li> <a href="#">Canales de comunicación</a> </li>
-                                            <li> <a href="#">Alertas por SMS</a> </li>
-                                            <li> <a href="#">Centro de mensajes</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="account-box">
-                                <div class="service-box">
-                                    <div class="service-desc">
-                                        <h4>Pagos y reembolsos</h4>
-                                        <ul>
-                                            <li> <a href="#">Pagos en línea</a> </li>
-                                            <li> <a href="#">Cuentas bancarias para reembolsos</a> </li>
-                                            <li> <a href="#">Cupones</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="account-box">
-                                <div class="service-box">
-                                    <div class="service-desc">
-                                        <h4>Regalos y detalles</h4>
-                                        <ul>
-                                            <li> <a href="#">Dejar comentarios de entrega</a> </li>
-                                            <li> <a href="#">Listas</a> </li>
-                                            <li> <a href="#">Identificaciones</a> </li>
-                                            <li> <a href="#">Perfil</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="account-box">
-                                <div class="service-box">
-                                    <div class="service-desc">
-                                        <h4>Otras cuentas</h4>
-                                        <ul>
-                                            <li> <a href="#">Registro de cuentas empresariales</a> </li>
-                                            <li> <a href="#">Cuenta de vendedor</a> </li>
-                                            <li> <a href="#">Servicios en la nube</a> </li>
-                                            <li> <a href="#">Inicio de sesión con Amazon</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="account-box">
-                                <div class="service-box">
-                                    <div class="service-desc">
-                                        <h4>Programas de compra y suscripciones</h4>
-                                        <ul>
-                                            <li> <a href="#">Suscríbete y ahorra</a> </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Tus pedidos</h3>
+                            <div id="orders-empty" class="alert alert-info" style="display:none;">Aún no tienes pedidos.</div>
+                            <div id="orders-container"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Mi cuenta -->
 
-    <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
-        <div class="main-instagram owl-carousel owl-theme">
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-01.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-02.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-03.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-04.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-06.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-07.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-08.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-09.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="images/instagram-img-05.jpg" alt="" />
-                    <div class="hov-in">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Instagram Feed  -->
-
-
-    <!-- Start Footer  -->
     <footer>
         <div class="footer-main">
             <div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Horario de atención</h3>
-							<ul class="list-time">
-								<li>Lunes a Viernes: 08:00 a 17:00 hrs</li> <li>Sábado: 10:00 a 20:00 hrs</li> <li>Domingo: <span>Cerrado</span></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Boletín</h3>
-                            <p>Recibe lanzamientos, promociones y recetas directamente en tu correo.</p>
-							<form class="newsletter-box">
-								<div class="form-group">
-									<input class="" type="email" name="Email" placeholder="Correo electrónico*" />
-									<i class="fa fa-envelope"></i>
-								</div>
-								<button class="btn hvr-hover" type="submit">Suscribirme</button>
-							</form>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12 col-sm-12">
-						<div class="footer-top-box">
-							<h3>Redes sociales</h3>
-							<p>Conecta con nuestra comunidad y comparte tus preparaciones favoritas.</p>
-							<ul>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Horario de atención</h3>
+                            <ul class="list-time">
+                                <li>Lunes a Viernes: 08:00 a 17:00 hrs</li> <li>Sábado: 10:00 a 20:00 hrs</li> <li>Domingo: <span>Cerrado</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Boletín</h3>
+                            <form class="newsletter-box">
+                                <div class="form-group">
+                                    <input class="" type="email" name="Email" placeholder="Correo electrónico*" />
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <button class="btn hvr-hover" type="submit">Suscribirme</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="footer-top-box">
+                            <h3>Redes sociales</h3>
+                            <p>Conecta con nuestra comunidad y comparte tus preparaciones favoritas.</p>
+                            <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
@@ -526,16 +189,16 @@
                                 <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
                             </ul>
-						</div>
-					</div>
-				</div>
-				<hr>
+                        </div>
+                    </div>
+                </div>
+                <hr>
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
                             <h4>Acerca de Freshshop</h4>
-                            <p>Somos un mercado digital enfocado en productos frescos, selecciones artesanales y experiencias saludables para toda la familia.</p> 
-							<p>Trabajamos con productores locales y procesos responsables para que siempre encuentres alimentos confiables y deliciosos.</p> 							
+                            <p>Somos un mercado digital enfocado en productos frescos, selecciones artesanales y experiencias saludables para toda la familia.</p>
+                            <p>Trabajamos con productores locales y procesos responsables para que siempre encuentres alimentos confiables y deliciosos.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12">
@@ -555,15 +218,9 @@
                         <div class="footer-link-contact">
                             <h4>Contáctanos</h4>
                             <ul>
-                                <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Dirección: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-phone-square"></i>Teléfono: <a href="tel:+1-888705770">+1-888 705 770</a></p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Correo: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p>
-                                </li>
+                                <li><p><i class="fas fa-map-marker-alt"></i>Dirección: Michael I. Days 3756 <br>Preston Street Wichita,<br> KS 67213 </p></li>
+                                <li><p><i class="fas fa-phone-square"></i>Teléfono: <a href="tel:+1-888705770">+1-888 705 770</a></p></li>
+                                <li><p><i class="fas fa-envelope"></i>Correo: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a></p></li>
                             </ul>
                         </div>
                     </div>
@@ -571,24 +228,19 @@
             </div>
         </div>
     </footer>
-    <!-- End Footer  -->
 
-    <!-- Start copyright  -->
     <div class="footer-copyright">
         <p class="footer-company">Todos los derechos reservados. &copy; 2018 <a href="#">ThewayShop</a> Diseñado por 
             <a href="https://html.design/">html design</a></p>
     </div>
-    <!-- End copyright  -->
 
     <a href="#" id="back-to-top" title="Volver arriba" style="display: none;">&uarr;</a>
 
-    <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
     <script src="js/jquery.superslides.min.js"></script>
     <script src="js/bootstrap-select.js"></script>
     <script src="js/inewsticker.js"></script>
@@ -600,6 +252,7 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/my-account.js"></script>
 </body>
-
 </html>
+

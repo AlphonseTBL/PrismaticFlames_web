@@ -425,13 +425,42 @@
     object-fit: contain;
 }
 
-/* Side cart visibility */
+/* Altura mínima solicitada para el bloque de productos en home */
+.products-box {
+    min-height: 800px;
+}
+
+/* Side cart visibility & slide-in */
 .side {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    max-width: 90%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 9999;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+    display: block;
 }
 
 .side.open {
-    display: block;
+    right: 0;
+}
+
+.side .side-close-btn {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    z-index: 1;
+}
+
+/* Ocultar opción de detalle en el dropdown de tienda */
+.dropdown-menu a[href="shop-detail.html"] {
+    display: none !important;
 }
 
 .book-badge {

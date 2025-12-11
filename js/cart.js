@@ -198,13 +198,30 @@
         initCartPage();
 
         // Toggle del side-menu para ver el carrito
-        var sideMenuLink = document.querySelector('.attr-nav .side-menu > a');
         var sidePanel = document.querySelector('.side');
         var closeSide = sidePanel ? sidePanel.querySelector('.close-side') : null;
-        if (sideMenuLink && sidePanel) {
-            sideMenuLink.addEventListener('click', function (e) {
+        var sideLinks = document.querySelectorAll('.side-menu > a, .attr-nav .side-menu > a');
+
+        // Botón de colapso adicional dentro del panel
+        if (sidePanel && !sidePanel.querySelector('.side-close-btn')) {
+            var extraClose = document.createElement('button');
+            extraClose.type = 'button';
+            extraClose.className = 'side-close-btn btn btn-secondary btn-sm';
+            extraClose.textContent = 'Cerrar';
+            extraClose.addEventListener('click', function (e) {
                 e.preventDefault();
-                sidePanel.classList.add('open');
+                sidePanel.classList.remove('open');
+            });
+            // Insertar al inicio del panel
+            sidePanel.insertBefore(extraClose, sidePanel.firstChild);
+        }
+
+        if (sidePanel && sideLinks.length) {
+            sideLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    sidePanel.classList.add('open');
+                });
             });
         }
         if (closeSide && sidePanel) {

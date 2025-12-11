@@ -55,7 +55,7 @@ function get_wishlist(mysqli $db, int $userId): array
     $items = [];
     $bookCol = wishlist_book_column($db);
     $sql = "
-        SELECT w.id, w.{$bookCol} AS libros_id, l.titulo, l.precio, l.portada_url
+        SELECT w.id, w.{$bookCol} AS libros_id, w.fecha_agregado, l.titulo, l.precio, l.portada_url
         FROM wishlist w
         INNER JOIN libros l ON l.id = w.{$bookCol}
         WHERE w.usuario_id = ?
@@ -67,11 +67,12 @@ function get_wishlist(mysqli $db, int $userId): array
     }
     $stmt->bind_param('i', $userId);
     $stmt->execute();
-    $stmt->bind_result($id, $librosId, $titulo, $precio, $portadaUrl);
+    $stmt->bind_result($id, $librosId, $fechaAgregado, $titulo, $precio, $portadaUrl);
     while ($stmt->fetch()) {
         $items[] = [
             'id' => (int)$id,
             'libros_id' => (int)$librosId,
+            'fecha_agregado' => $fechaAgregado,
             'titulo' => $titulo,
             'precio' => (float)$precio,
             'portada_url' => $portadaUrl ?? '',
@@ -106,7 +107,7 @@ try {
             $exists->close();
         }
 
-        $ins = $db->prepare("INSERT INTO wishlist (usuario_id, {$bookCol}) VALUES (?, ?)");
+        $ins = $db->prepare("INSERT INTO wishlist (usuario_id, {$bookCol}, fecha_agregado) VALUES (?, ?, NOW())");
         if (!$ins) {
             throw new RuntimeException('No se pudo agregar a la lista de deseos');
         }

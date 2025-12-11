@@ -90,11 +90,16 @@
                 };
             }
 
-            // Propagar id del libro al botón de carrito
+            // Propagar id del libro a botones de carrito y wishlist
             var addBtn = document.getElementById('add-to-cart-btn');
             if (addBtn && book.id) {
                 addBtn.setAttribute('data-book-id', book.id);
                 addBtn.setAttribute('data-libros-id', book.id);
+            }
+            var wishBtn = document.getElementById('add-to-wishlist-btn');
+            if (wishBtn && book.id) {
+                wishBtn.setAttribute('data-book-id', book.id);
+                wishBtn.setAttribute('data-libros-id', book.id);
             }
 
             if (extraInfoBox) {
