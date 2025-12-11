@@ -211,7 +211,7 @@
 	$(".brand-box").niceScroll({
 		cursorcolor: "#9b9b9c",
 	});
-
+	
 	$(document).ready(function() {
 		var authBoxes = document.querySelectorAll('[data-auth-box]');
 		if (!authBoxes.length) {
