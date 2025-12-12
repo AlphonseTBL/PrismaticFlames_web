@@ -126,6 +126,7 @@ if ($connection->connect_errno) {
 $connection->set_charset('utf8mb4');
 
 $bookId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+$search = trim($_GET['q'] ?? '');
 
 $sql = <<<SQL
 SELECT
@@ -146,8 +147,17 @@ LEFT JOIN libros_categorias lc ON lc.libro_id = l.id
 LEFT JOIN categorias c ON c.id = lc.categoria_id
 SQL;
 
+$conditions = [];
 if ($bookId > 0) {
-    $sql .= " WHERE l.id = {$bookId} ";
+    $conditions[] = "l.id = {$bookId}";
+}
+if ($search !== '') {
+    $like = $connection->real_escape_string('%' . $search . '%');
+    $conditions[] = "(l.titulo LIKE '{$like}' OR l.descripcion LIKE '{$like}' OR a.nombre LIKE '{$like}')";
+}
+
+if ($conditions) {
+    $sql .= ' WHERE ' . implode(' AND ', $conditions);
 }
 
 $sql .= "

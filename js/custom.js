@@ -218,6 +218,26 @@
 			return;
 		}
 
+		// Búsqueda rápida por título o autor: redirige a shop.html?q=
+		var topSearchInput = document.querySelector('.top-search input.form-control');
+		var navigateSearch = function() {
+			if (!topSearchInput) return;
+			var q = (topSearchInput.value || '').trim();
+			var url = 'shop.html';
+			if (q) {
+				url += '?q=' + encodeURIComponent(q);
+			}
+			window.location.href = url;
+		};
+		if (topSearchInput) {
+			topSearchInput.addEventListener('keydown', function(e) {
+				if (e.key === 'Enter') {
+					e.preventDefault();
+					navigateSearch();
+				}
+			});
+		}
+
 		var renderAuthState = function(payload) {
 			if (!payload || !payload.authenticated) {
 				return;

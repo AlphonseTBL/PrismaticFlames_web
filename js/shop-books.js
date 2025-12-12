@@ -195,7 +195,11 @@
         }
     };
 
-    fetch('php/books.php')
+    var params = new URLSearchParams(window.location.search);
+    var searchQuery = params.get('q') || '';
+    var endpoint = 'php/books.php' + (searchQuery ? ('?q=' + encodeURIComponent(searchQuery)) : '');
+
+    fetch(endpoint)
         .then(function(response) {
             if (!response.ok) {
                 throw new Error('No se pudo cargar el catálogo');

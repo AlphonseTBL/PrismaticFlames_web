@@ -179,3 +179,6 @@ if ($method === 'DELETE') {
 $db->close();
 json_response(405, ['error' => 'Método no permitido']);
 
+
+
+

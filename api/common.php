@@ -191,3 +191,6 @@ function earned_points(float $total): int
     return (int)floor($total / 10.0);
 }
 
+
+
+
